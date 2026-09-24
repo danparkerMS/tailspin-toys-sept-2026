@@ -1,7 +1,15 @@
-import { eq, asc } from 'drizzle-orm';
+import { and, eq, asc, inArray, type SQL } from 'drizzle-orm';
 import type { Database } from './db';
 import { games, categories, publishers } from '../../db/schema';
 import type { Game } from '../types/game';
+
+/** Optional criteria for narrowing {@link getAllGames} results. */
+export interface GameFilterOptions {
+    /** When non-empty, only games in one of these category ids are returned. */
+    categoryIds?: number[];
+    /** When non-empty, only games from one of these publisher ids are returned. */
+    publisherIds?: number[];
+}
 
 const gameSelection = {
     id: games.id,
@@ -50,9 +58,30 @@ function baseGamesQuery(db: Database) {
         .leftJoin(publishers, eq(games.publisherId, publishers.id));
 }
 
-/** All games ordered by title. */
-export async function getAllGames(db: Database): Promise<Game[]> {
-    const rows = await baseGamesQuery(db).orderBy(asc(games.title));
+/** Builds the combined `WHERE` clause for the given filter options, or `undefined` when none apply. */
+function buildGameFilterCondition(filters?: GameFilterOptions): SQL | undefined {
+    const conditions: SQL[] = [];
+
+    if (filters?.categoryIds && filters.categoryIds.length > 0) {
+        conditions.push(inArray(games.categoryId, filters.categoryIds));
+    }
+    if (filters?.publisherIds && filters.publisherIds.length > 0) {
+        conditions.push(inArray(games.publisherId, filters.publisherIds));
+    }
+
+    return conditions.length > 0 ? and(...conditions) : undefined;
+}
+
+/**
+ * Games ordered by title, optionally narrowed by category and/or publisher.
+ *
+ * Multiple ids within a single filter (e.g. several category ids) are combined
+ * with OR; the category and publisher filters are combined with AND.
+ */
+export async function getAllGames(db: Database, filters?: GameFilterOptions): Promise<Game[]> {
+    const rows = await baseGamesQuery(db)
+        .where(buildGameFilterCondition(filters))
+        .orderBy(asc(games.title));
     return rows.map(mapGame);
 }
 

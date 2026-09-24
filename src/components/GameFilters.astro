@@ -1,0 +1,67 @@
+---
+import type { Category, Publisher } from '../types/game';
+
+interface Props {
+    /** Categories available to filter by, ordered by name. */
+    categories: Category[];
+    /** Publishers available to filter by, ordered by name. */
+    publishers: Publisher[];
+}
+
+const { categories, publishers } = Astro.props;
+---
+
+<section
+    aria-label="Filter games"
+    data-testid="game-filters"
+    class="mb-6 flex flex-col gap-5 rounded-xl border border-slate-700/50 bg-slate-800/60 p-4 backdrop-blur-sm sm:flex-row sm:flex-wrap sm:items-start sm:justify-between"
+>
+    <fieldset data-testid="filter-categories">
+        <legend class="mb-2 text-sm font-medium text-slate-200">Category</legend>
+        <div class="flex flex-wrap gap-2">
+            {categories.map((category) => (
+                <label class="inline-flex cursor-pointer items-center gap-1.5 rounded-full border border-slate-600 bg-slate-900/40 px-3 py-1 text-sm text-slate-300 transition-colors duration-200 has-checked:border-blue-500 has-checked:bg-blue-900/40 has-checked:text-blue-200 hover:border-blue-500/50 hover:text-slate-100 has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-blue-500">
+                    <input
+                        type="checkbox"
+                        name="category"
+                        value={category.id}
+                        class="game-filter-checkbox h-4 w-4 rounded border-slate-500 bg-slate-800 text-blue-600 focus:outline-none"
+                        data-filter-type="category"
+                        data-testid={`filter-category-${category.id}`}
+                    />
+                    {category.name}
+                </label>
+            ))}
+        </div>
+    </fieldset>
+
+    <fieldset data-testid="filter-publishers">
+        <legend class="mb-2 text-sm font-medium text-slate-200">Publisher</legend>
+        <div class="flex flex-wrap gap-2">
+            {publishers.map((publisher) => (
+                <label class="inline-flex cursor-pointer items-center gap-1.5 rounded-full border border-slate-600 bg-slate-900/40 px-3 py-1 text-sm text-slate-300 transition-colors duration-200 has-checked:border-purple-500 has-checked:bg-purple-900/40 has-checked:text-purple-200 hover:border-purple-500/50 hover:text-slate-100 has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-purple-500">
+                    <input
+                        type="checkbox"
+                        name="publisher"
+                        value={publisher.id}
+                        class="game-filter-checkbox h-4 w-4 rounded border-slate-500 bg-slate-800 text-purple-600 focus:outline-none"
+                        data-filter-type="publisher"
+                        data-testid={`filter-publisher-${publisher.id}`}
+                    />
+                    {publisher.name}
+                </label>
+            ))}
+        </div>
+    </fieldset>
+
+    <div class="flex items-start sm:self-end">
+        <button
+            type="button"
+            id="clear-filters"
+            data-testid="clear-filters-button"
+            class="rounded text-sm font-medium text-blue-400 underline decoration-dotted underline-offset-4 transition-colors duration-200 hover:text-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        >
+            Clear filters
+        </button>
+    </div>
+</section>

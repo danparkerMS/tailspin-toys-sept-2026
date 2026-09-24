@@ -1,0 +1,107 @@
+- generic [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e4]:
+      - button "Toggle menu" [ref=e6]
+      - link "Tailspin Toys" [ref=e10] [cursor=pointer]:
+        - /url: /
+  - main [ref=e11]:
+    - generic [ref=e13]:
+      - generic [ref=e14]:
+        - heading "Welcome to Tailspin Toys" [level=1] [ref=e15]
+        - paragraph [ref=e16]: Find your next game! And maybe even back one! Explore our collection!
+      - generic [ref=e17]:
+        - heading "Featured Games" [level=2] [ref=e18]
+        - region "Filter games" [ref=e19]:
+          - group "Category" [ref=e20]:
+            - generic [ref=e22]:
+              - generic [ref=e23] [cursor=pointer]:
+                - checkbox "Action" [ref=e24]
+                - text: Action
+              - generic [ref=e25] [cursor=pointer]:
+                - checkbox "Adventure" [ref=e26]
+                - text: Adventure
+              - generic [ref=e27] [cursor=pointer]:
+                - checkbox "Puzzle" [ref=e28]
+                - text: Puzzle
+              - generic [ref=e29] [cursor=pointer]:
+                - checkbox "Simulation" [ref=e30]
+                - text: Simulation
+              - generic [ref=e31] [cursor=pointer]:
+                - checkbox "Strategy" [ref=e32]
+                - text: Strategy
+          - group "Publisher" [ref=e33]:
+            - generic [ref=e35]:
+              - generic [ref=e36] [cursor=pointer]:
+                - checkbox "CodeForge Studios" [checked] [active] [ref=e37]
+                - text: CodeForge Studios
+              - generic [ref=e38] [cursor=pointer]:
+                - checkbox "DevMasters Inc." [ref=e39]
+                - text: DevMasters Inc.
+              - generic [ref=e40] [cursor=pointer]:
+                - checkbox "GitHub Games" [ref=e41]
+                - text: GitHub Games
+              - generic [ref=e42] [cursor=pointer]:
+                - checkbox "Ops Interactive" [ref=e43]
+                - text: Ops Interactive
+          - button "Clear filters" [ref=e45]
+        - paragraph [ref=e46]: Showing 6 of 21 games
+        - generic [ref=e47]:
+          - link "Cloud Conqueror Action CodeForge Studios Cloud Conqueror thrusts you into a high-stakes aerial battle against rogue cloud services. With Mona as your co-pilot, navigate through stormy skies and outmaneuver digital adversaries in a quest to reclaim control over your virtual domain. Support this game through our crowdfunding platform! View details" [ref=e74] [cursor=pointer]:
+            - /url: /game/21
+            - generic [ref=e77]:
+              - heading "Cloud Conqueror" [level=3] [ref=e78]
+              - generic [ref=e79]:
+                - generic [ref=e80]: Action
+                - generic [ref=e81]: CodeForge Studios
+              - paragraph [ref=e82]: Cloud Conqueror thrusts you into a high-stakes aerial battle against rogue cloud services. With Mona as your co-pilot, navigate through stormy skies and outmaneuver digital adversaries in a quest to reclaim control over your virtual domain. Support this game through our crowdfunding platform!
+              - generic [ref=e83]: View details
+          - link "Code Puzzle Chronicles Puzzle CodeForge Studios Code Puzzle Chronicles offers brain-teasing challenges that unravel cryptic algorithms and obscure debugging quests. Mona assists you through each twist, inviting coders to master logic puzzles inspired by real-world coding conundrums. Support this game through our crowdfunding platform! View details" [ref=e87] [cursor=pointer]:
+            - /url: /game/5
+            - generic [ref=e90]:
+              - heading "Code Puzzle Chronicles" [level=3] [ref=e91]
+              - generic [ref=e92]:
+                - generic [ref=e93]: Puzzle
+                - generic [ref=e94]: CodeForge Studios
+              - paragraph [ref=e95]: Code Puzzle Chronicles offers brain-teasing challenges that unravel cryptic algorithms and obscure debugging quests. Mona assists you through each twist, inviting coders to master logic puzzles inspired by real-world coding conundrums. Support this game through our crowdfunding platform!
+              - generic [ref=e96]: View details
+          - link "Code Quest Odyssey Adventure CodeForge Studios Code Quest Odyssey launches you on an epic journey through enchanted digital realms where coding skills are your passport to discovery. Accompanied by Mona, unravel ancient source codes and conquer challenges that blend narrative with technical ingenuity. Support this game through our crowdfunding platform! View details" [ref=e100] [cursor=pointer]:
+            - /url: /game/13
+            - generic [ref=e103]:
+              - heading "Code Quest Odyssey" [level=3] [ref=e104]
+              - generic [ref=e105]:
+                - generic [ref=e106]: Adventure
+                - generic [ref=e107]: CodeForge Studios
+              - paragraph [ref=e108]: Code Quest Odyssey launches you on an epic journey through enchanted digital realms where coding skills are your passport to discovery. Accompanied by Mona, unravel ancient source codes and conquer challenges that blend narrative with technical ingenuity. Support this game through our crowdfunding platform!
+              - generic [ref=e109]: View details
+          - link "DevOps Dominion Strategy CodeForge Studios In DevOps Dominion, strategic planning meets advanced deployment tactics in a fast-paced battlefield of code. Mona leads your team of digital warriors through orchestrated pipelines and microservice skirmishes, ensuring every command brings a competitive edge. Support this game through our crowdfunding platform! View details" [ref=e139] [cursor=pointer]:
+            - /url: /game/1
+            - generic [ref=e142]:
+              - heading "DevOps Dominion" [level=3] [ref=e143]
+              - generic [ref=e144]:
+                - generic [ref=e145]: Strategy
+                - generic [ref=e146]: CodeForge Studios
+              - paragraph [ref=e147]: In DevOps Dominion, strategic planning meets advanced deployment tactics in a fast-paced battlefield of code. Mona leads your team of digital warriors through orchestrated pipelines and microservice skirmishes, ensuring every command brings a competitive edge. Support this game through our crowdfunding platform!
+              - generic [ref=e148]: View details
+          - link "Script Strike Action CodeForge Studios Script Strike propels you into a fast-paced coding battleground where every keystroke could change the tide of an intense conflict. Mona rallies your forces as you dive into real-time challenges that merge reflexes with smart script execution. Support this game through our crowdfunding platform! View details" [ref=e243] [cursor=pointer]:
+            - /url: /game/17
+            - generic [ref=e246]:
+              - heading "Script Strike" [level=3] [ref=e247]
+              - generic [ref=e248]:
+                - generic [ref=e249]: Action
+                - generic [ref=e250]: CodeForge Studios
+              - paragraph [ref=e251]: Script Strike propels you into a fast-paced coding battleground where every keystroke could change the tide of an intense conflict. Mona rallies your forces as you dive into real-time challenges that merge reflexes with smart script execution. Support this game through our crowdfunding platform!
+              - generic [ref=e252]: View details
+          - link "Virtual Server Simulator Simulation CodeForge Studios Virtual Server Simulator places you in a hyper-realistic data center where resource management is the key to survival. Mona guides you as you balance load distributions and optimize server performance in a dynamic virtual ecosystem. Support this game through our crowdfunding platform! View details" [ref=e308] [cursor=pointer]:
+            - /url: /game/9
+            - generic [ref=e311]:
+              - heading "Virtual Server Simulator" [level=3] [ref=e312]
+              - generic [ref=e313]:
+                - generic [ref=e314]: Simulation
+                - generic [ref=e315]: CodeForge Studios
+              - paragraph [ref=e316]: Virtual Server Simulator places you in a hyper-realistic data center where resource management is the key to survival. Mona guides you as you balance load distributions and optimize server performance in a dynamic virtual ecosystem. Support this game through our crowdfunding platform!
+              - generic [ref=e317]: View details
+  - generic [ref=e323]:
+    - button [ref=e324]
+    - button [ref=e330]
+    - button [ref=e334]
+    - button [ref=e339]

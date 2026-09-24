@@ -1,0 +1,71 @@
+- generic [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e4]:
+      - button "Toggle menu" [ref=e6]
+      - link "Tailspin Toys" [ref=e10] [cursor=pointer]:
+        - /url: /
+  - main [ref=e11]:
+    - generic [ref=e13]:
+      - generic [ref=e14]:
+        - heading "Welcome to Tailspin Toys" [level=1] [ref=e15]
+        - paragraph [ref=e16]: Find your next game! And maybe even back one! Explore our collection!
+      - generic [ref=e17]:
+        - heading "Featured Games" [level=2] [ref=e18]
+        - region "Filter games" [ref=e19]:
+          - group "Category" [ref=e20]:
+            - generic [ref=e22]:
+              - generic [ref=e23] [cursor=pointer]:
+                - checkbox "Action" [checked] [active] [ref=e24]
+                - text: Action
+              - generic [ref=e25] [cursor=pointer]:
+                - checkbox "Adventure" [ref=e26]
+                - text: Adventure
+              - generic [ref=e27] [cursor=pointer]:
+                - checkbox "Puzzle" [ref=e28]
+                - text: Puzzle
+              - generic [ref=e29] [cursor=pointer]:
+                - checkbox "Simulation" [ref=e30]
+                - text: Simulation
+              - generic [ref=e31] [cursor=pointer]:
+                - checkbox "Strategy" [ref=e32]
+                - text: Strategy
+          - group "Publisher" [ref=e33]:
+            - generic [ref=e35]:
+              - generic [ref=e36] [cursor=pointer]:
+                - checkbox "CodeForge Studios" [checked] [ref=e37]
+                - text: CodeForge Studios
+              - generic [ref=e38] [cursor=pointer]:
+                - checkbox "DevMasters Inc." [ref=e39]
+                - text: DevMasters Inc.
+              - generic [ref=e40] [cursor=pointer]:
+                - checkbox "GitHub Games" [ref=e41]
+                - text: GitHub Games
+              - generic [ref=e42] [cursor=pointer]:
+                - checkbox "Ops Interactive" [ref=e43]
+                - text: Ops Interactive
+          - button "Clear filters" [ref=e45]
+        - paragraph [ref=e46]: Showing 2 of 21 games
+        - generic [ref=e47]:
+          - link "Cloud Conqueror Action CodeForge Studios Cloud Conqueror thrusts you into a high-stakes aerial battle against rogue cloud services. With Mona as your co-pilot, navigate through stormy skies and outmaneuver digital adversaries in a quest to reclaim control over your virtual domain. Support this game through our crowdfunding platform! View details" [ref=e74] [cursor=pointer]:
+            - /url: /game/21
+            - generic [ref=e77]:
+              - heading "Cloud Conqueror" [level=3] [ref=e78]
+              - generic [ref=e79]:
+                - generic [ref=e80]: Action
+                - generic [ref=e81]: CodeForge Studios
+              - paragraph [ref=e82]: Cloud Conqueror thrusts you into a high-stakes aerial battle against rogue cloud services. With Mona as your co-pilot, navigate through stormy skies and outmaneuver digital adversaries in a quest to reclaim control over your virtual domain. Support this game through our crowdfunding platform!
+              - generic [ref=e83]: View details
+          - link "Script Strike Action CodeForge Studios Script Strike propels you into a fast-paced coding battleground where every keystroke could change the tide of an intense conflict. Mona rallies your forces as you dive into real-time challenges that merge reflexes with smart script execution. Support this game through our crowdfunding platform! View details" [ref=e243] [cursor=pointer]:
+            - /url: /game/17
+            - generic [ref=e246]:
+              - heading "Script Strike" [level=3] [ref=e247]
+              - generic [ref=e248]:
+                - generic [ref=e249]: Action
+                - generic [ref=e250]: CodeForge Studios
+              - paragraph [ref=e251]: Script Strike propels you into a fast-paced coding battleground where every keystroke could change the tide of an intense conflict. Mona rallies your forces as you dive into real-time challenges that merge reflexes with smart script execution. Support this game through our crowdfunding platform!
+              - generic [ref=e252]: View details
+  - generic [ref=e323]:
+    - button [ref=e324]
+    - button [ref=e330]
+    - button [ref=e334]
+    - button [ref=e339]
