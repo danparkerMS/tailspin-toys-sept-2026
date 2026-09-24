@@ -1,4 +1,5 @@
 ---
+// Provides reusable button and link styling for primary site actions.
 import type { HTMLAttributes } from 'astro/types';
 
 interface Props extends Omit<HTMLAttributes<'button'>, 'type'> {
@@ -25,7 +26,7 @@ const {
 } = Astro.props;
 
 const base =
-    'inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:ring-2 focus:ring-blue-500 focus:outline-none';
+    'inline-flex min-h-11 items-center justify-center rounded-lg font-medium transition-all duration-300 motion-reduce:transition-none focus:ring-2 focus:ring-blue-500 focus:outline-none contrast:border-2 contrast:border-yellow-300 contrast:bg-yellow-300 contrast:text-black contrast:hover:bg-white contrast:focus:ring-yellow-300 contrast:focus:ring-offset-2 contrast:focus:ring-offset-black';
 
 const variants: Record<NonNullable<Props['variant']>, string> = {
     solid: 'bg-blue-600 hover:bg-blue-700 text-white',
