@@ -1,1 +1,5 @@
+/* Defines shared Tailwind configuration for the site's global presentation modes. */
 @import "tailwindcss";
+
+@custom-variant light (&:where(.light-mode, .light-mode *));
+@custom-variant contrast (&:is(.high-contrast, .high-contrast *));
